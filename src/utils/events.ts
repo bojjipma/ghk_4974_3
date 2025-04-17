@@ -7,7 +7,6 @@ declare global {
 
 type Payload = {
   subscription: 'month' | 'year';
-  carousel: string;
 };
 
 export const sendDataToGA = async (payload: Payload) => {
@@ -22,7 +21,7 @@ export const sendDataToGA = async (payload: Payload) => {
       {
         redirect: 'follow',
         method: 'POST',
-        body: JSON.stringify({ date, ...payload, variant: '1' }),
+        body: JSON.stringify({ date, ...payload, variant: '3' }),
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
